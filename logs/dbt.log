@@ -1,0 +1,77 @@
+
+
+============================== 2022-09-08 01:54:17.268491 | c2a33f64-9417-46e2-9880-a2aebcb2dd45 ==============================
+[0m01:54:17.268491 [info ] [MainThread]: Running with dbt=1.2.1
+[0m01:54:17.269490 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:54:17.270494 [debug] [MainThread]: Tracking: tracking
+[0m01:54:17.291492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261872F9190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261872F9220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261872F9040>]}
+[0m01:54:17.292492 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\User\.dbt
+[0m01:54:17.294491 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-09-08 01:55:37.684737 | 2cfddd84-8455-4f69-9496-74529eae76f3 ==============================
+[0m01:55:37.684737 [info ] [MainThread]: Running with dbt=1.2.1
+[0m01:55:37.684737 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:55:37.684737 [debug] [MainThread]: Tracking: tracking
+[0m01:55:37.719724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028CCBDF9190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028CCBDF9220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028CCBDF9040>]}
+[0m01:55:37.721725 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-09-08 01:57:21.219490 | 9992d8db-b772-4588-b5ec-b154c51468ac ==============================
+[0m01:57:21.219490 [info ] [MainThread]: Running with dbt=1.2.1
+[0m01:57:21.219490 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'dbt_demo', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:57:21.219490 [debug] [MainThread]: Tracking: tracking
+[0m01:57:21.258984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F619191C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F619190D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F61919370>]}
+[0m01:57:21.259985 [debug] [MainThread]: Starter project path: C:\Users\User\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\include\starter_project
+[0m01:57:29.630880 [info ] [MainThread]: Profile dbt_demo written to C:\Users\User\.dbt\profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m01:57:29.630880 [info ] [MainThread]: 
+Your new dbt project "dbt_demo" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:57:29.635846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F619191C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F619190D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F61919250>]}
+[0m01:57:29.636850 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-09-12 01:41:44.062621 | 4dfa8afa-ff08-495f-90c4-3e44bcaabd7c ==============================
+[0m01:41:44.062621 [info ] [MainThread]: Running with dbt=1.2.1
+[0m01:41:44.062621 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'dbt_demo', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:41:44.062621 [debug] [MainThread]: Tracking: tracking
+[0m01:41:44.097410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AE0D79580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AE0D79FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AE0D79250>]}
+[0m01:41:44.100410 [info ] [MainThread]: A project called dbt_demo already exists here.
+[0m01:41:44.101412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AE0D79C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AE0D79250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023AE0D79580>]}
+[0m01:41:44.102413 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-09-12 01:42:37.478913 | 041fa3e5-8272-49d2-aadb-8f463cc3490f ==============================
+[0m01:42:37.478913 [info ] [MainThread]: Running with dbt=1.2.1
+[0m01:42:37.478913 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m01:42:37.481907 [debug] [MainThread]: Tracking: tracking
+[0m01:42:37.506507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021278709550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021278709DC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021278709220>]}
+[0m01:42:37.585500 [debug] [MainThread]: Executing "git --help"
+[0m01:42:37.601733 [debug] [MainThread]: Acquiring new postgres connection "debug"
+[0m01:42:37.602743 [debug] [MainThread]: Using postgres connection "debug"
+[0m01:42:37.602743 [debug] [MainThread]: On debug: select 1 as id
+[0m01:42:37.603740 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:42:39.888528 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+could not translate host name "postgres" to address: Unknown host
+
+[0m01:42:43.176156 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m01:42:43.176156 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m01:42:43.176156 [debug] [MainThread]: On debug: No close available on handle
+[0m01:42:43.182781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212787E25E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212787E29A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212787E2DC0>]}
+[0m01:42:43.183775 [debug] [MainThread]: Flushing usage events
+[0m01:42:43.309049 [debug] [MainThread]: Connection 'debug' was properly closed.

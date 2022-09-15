@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "All information about orders"
+    columns: 
+      - name: order_id
+        description: "Unique order id"
+        tests: 
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer id"
+        tests: 
+          - not_null
+          - relationships:
+              to: ref('raw_customers')
+              field: id
+      - name: order_date
+        description: "Date of order"
+        tests: 
+          - not_null
+      - name: status
+        description: "Status of order: returned, completed, return_pending"
+        tests: 
+          - not_null
+          - accepted_values:
+              values: ['returned', 'completed', 'return_pending', 'placed', 'shipped']

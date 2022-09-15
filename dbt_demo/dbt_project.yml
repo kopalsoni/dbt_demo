@@ -1,0 +1,44 @@
+
+
+name: 'jaffle_shop_metrics'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'jaffle_shop_metrics'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+
+# Configuring models
+on-run-start:
+  - ' create schema if not exists _run_log '
+  - ' create table if not exists _run_log.run_log ( event_name varchar(100), uuid varchar(100), event_timestamp timestamp, event_schema varchar(100), event_model varchar(100) ) '
+
+vars:
+  last_updated: ' current_timestamp::timestamp'
+
+
+models:
+  jaffle_shop_metrics:
+    pre-hook: " insert into _run_log.run_log ( event_name, uuid, event_timestamp, event_schema, event_model) values ( 'MODEL_BEGIN', '{{invocation_id}}', current_timestamp::timestamp, '{{this.schema}}', '{{this.name}}' ) "
+    post-hook: " insert into _run_log.run_log ( event_name, uuid, event_timestamp, event_schema, event_model) values ( 'MODEL_END', '{{invocation_id}}', current_timestamp::timestamp, '{{this.schema}}', '{{this.name}}' ) "
+    materialized: table
+
+    # Config indicated by + and applies to all files under models/example/
+    example:
+      +materialized: view

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "All information about customers"
+    columns: 
+      - name: customer_id
+        description: "Unique customer id"
+        tests: 
+          - unique
+          - not_null
+      - name: first_name
+        description: "Customer First Name"
+        tests: 
+          - not_null
+      - name: last_name
+        description: "Customer Last Name"
+        tests:
+      - name: last_updated
+        description: "Last updated date time stamp"
+        tests:

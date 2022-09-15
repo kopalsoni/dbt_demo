@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: "All information about customers"
+    columns: 
+      - name: payment_id
+        description: "Primary key of the table stg_payments"
+        tests: 
+          - unique
+          - not_null
+      - name: order_id
+        description: "Order id associated with the payment, foreign key to stg_orders"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('raw_orders')
+              field: id
+      - name: payment_method
+        description: "Payment Method : credit_card, coupon, bank_transfer, gift_card"
+        tests: 
+          - accepted_values:
+              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
+      - name: amount_dollars
+        description: ""
+
+

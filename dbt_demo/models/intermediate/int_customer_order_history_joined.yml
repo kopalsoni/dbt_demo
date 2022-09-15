@@ -1,0 +1,91 @@
+version: 2
+
+sources:
+  - name: int_base_tables
+    database: |
+      {%- if  target.name == "dev" -%} DataWarehouseX
+      {%- elif target.name == "prod"  -%} postgres
+      {%- else -%} invalid_database
+      {%- endif -%}
+    schema: core
+    description: A replica of the postgres database used to power the jaffle_shop app.
+    tables: 
+      - name: stg_orders
+        columns: 
+          - name: order_id
+            description: Primary key of the table stg_orders
+            tests:
+              - unique
+              - not_null
+            # tests:
+            #   - not_null
+            #   - unique
+
+          - name: customer_id
+            description: Foreign key to stg_customers
+          
+          - name: order_date
+            description: Date of customer's order
+          
+          - name: status
+            description: Order's status
+            # tests:
+            #   - accepted_values: 
+            #       values : ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+      - name: stg_customers
+        columns:
+          - name: customer_id
+            description: Primary key of the table stg_customers
+          
+          - name: first_name
+            description: First name of the customer
+          
+          - name: last_name
+            description: Last  name of the customer
+      - name: stg_payments
+        description: Information extracted from table stg_payments
+        columns:
+          - name: payment_id
+            description: Primary key of the table stg_payment
+          
+          - name: order_id
+            description: Foreign key to stg_orders
+            tests:
+              - relationships:
+                  to: ref('stg_orders')
+                  field: order_id
+          
+          - name: payment_method
+            description: "Payment Method : credit_card, coupon, bank_transfer, gift_card"
+          - name: amount_dollars
+
+
+models:
+  - name: int_customer_order_history_joined
+    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+
+    columns:
+      - name: customer_id
+        description: This is a unique identifier for a customer
+
+      - name: first_name    
+        config:
+          tags: ['pii']
+        description: Customer's first name. PII.
+
+      - name: last_name 
+        config:
+          tags: ['pii']
+        description: Customer's last name. PII.
+
+      - name: first_order
+        description: Date (UTC) of a customer's first order
+
+      - name: most_recent_order
+        description: Date (UTC) of a customer's most recent order
+
+      - name: number_of_orders
+        description: Count of the number of orders a customer has placed
+
+      - name: customer_status
+        description: The status of the customer and whether they are churned, at risk of churn, or healthy
