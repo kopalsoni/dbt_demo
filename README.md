@@ -19,3 +19,4 @@
 * `dbt run` -- target dev - to run in dev/prod/env
 * `dbt docs generate` - compile relevant information about your dbt project and warehouse into manifest.json and catalog.json files respectively
 * `dbt docs serve` -- to use these .json files to populate a local website with documentation.
+* `dbt deps` - to install or update packages
