@@ -1,5 +1,5 @@
 
-# to see path of profiles.yml file run below command
+# to see path of profiles.yml file in your local machine, run below command
 dbt debug --config-dir
 
 # start C:\Users\User\.dbt
